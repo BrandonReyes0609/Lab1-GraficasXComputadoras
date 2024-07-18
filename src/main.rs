@@ -19,7 +19,7 @@ fn main() {
         (205, 410), (193, 383)
     ];
 
-    framebuffer.draw_polygon(&polygon_points, white);
+    framebuffer.draw_thick_polygon(&polygon_points, white, 3); // grosor de 3 píxeles
     framebuffer.fill_polygon(&polygon_points, yellow);
 
     framebuffer.save_as_bmp("output.bmp").expect("Failed to save BMP file");

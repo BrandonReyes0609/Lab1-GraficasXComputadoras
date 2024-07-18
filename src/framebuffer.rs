@@ -37,6 +37,21 @@ impl Framebuffer {
         }
     }
 
+    pub fn draw_thick_polygon(&mut self, points: &[(isize, isize)], color: Color, thickness: usize) {
+        for i in 0..thickness {
+            let offset = i as isize;
+            let offset_points: Vec<(isize, isize)> = points.iter()
+                .map(|&(x, y)| (x + offset, y + offset))
+                .collect();
+            self.draw_polygon(&offset_points, color);
+
+            let offset_points: Vec<(isize, isize)> = points.iter()
+                .map(|&(x, y)| (x - offset, y - offset))
+                .collect();
+            self.draw_polygon(&offset_points, color);
+        }
+    }
+
     pub fn fill_polygon(&mut self, points: &[(isize, isize)], color: Color) {
         if points.len() < 3 {
             return;
