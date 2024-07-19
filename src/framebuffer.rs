@@ -103,3 +103,4 @@ impl Color {
         Self { r, g, b }
     }
 }
+
