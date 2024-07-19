@@ -29,4 +29,3 @@ pub fn save_bmp(filename: &str, width: usize, height: usize, pixels: &[crate::fr
 
     Ok(())
 }
-

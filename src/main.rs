@@ -40,4 +40,3 @@ fn main() {
 
     framebuffer.save_as_bmp("output.bmp").expect("Failed to save BMP file");
 }
-

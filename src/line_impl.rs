@@ -23,4 +23,3 @@ pub fn draw_line_bresenham(framebuffer: &mut crate::framebuffer::Framebuffer, x0
         }
     }
 }
-
